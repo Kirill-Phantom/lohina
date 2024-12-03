@@ -3,7 +3,7 @@ body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(135deg, #6a11cb, #2575fc); /* Градиент */
+    background: linear-gradient(135deg, #1c1c1c, #2a2a2a); /* Тёмный градиент */
     color: #fff;
     display: flex;
     justify-content: center;
@@ -14,26 +14,28 @@ body {
 
 /* Контейнер */
 .container {
-    background: rgba(255, 255, 255, 0.1); /* Прозрачный фон */
+    background: rgba(33, 33, 33, 0.9); /* Почти чёрный с небольшой прозрачностью */
+    border: 2px solid rgba(255, 255, 255, 0.1); /* Полупрозрачная рамка */
     border-radius: 15px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2); /* Мягкая тень */
-    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5); /* Мягкая тень */
+    backdrop-filter: blur(5px);
     padding: 30px;
     max-width: 700px;
     width: 90%;
     text-align: center;
-    animation: slideIn 1.2s ease-out forwards;
+    animation: fadeIn 1.2s ease-out forwards;
+    transform-origin: center;
 }
 
-/* Анимация появления контейнера */
-@keyframes slideIn {
+/* Анимация появления */
+@keyframes fadeIn {
     0% {
-        transform: translateY(100px);
         opacity: 0;
+        transform: scale(0.9);
     }
     100% {
-        transform: translateY(0);
         opacity: 1;
+        transform: scale(1);
     }
 }
 
@@ -41,42 +43,24 @@ body {
 h1 {
     font-size: 2.5rem;
     margin-bottom: 20px;
-    color: #fdfdfd;
+    color: #00eaff; /* Неоновый голубой */
+    text-shadow: 0 0 10px #00eaff, 0 0 20px #00eaff;
     text-transform: uppercase;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-    animation: glow 1.5s infinite alternate;
-}
-
-/* Анимация сияния заголовка */
-@keyframes glow {
-    from {
-        text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.5);
-    }
-    to {
-        text-shadow: 2px 2px 20px rgba(255, 255, 255, 1);
-    }
 }
 
 /* Входные группы */
 .input-group {
     margin-bottom: 20px;
-    background: rgba(0, 0, 0, 0.2);
+    background: rgba(50, 50, 50, 0.9); /* Тёмно-серый фон */
     padding: 15px;
     border-radius: 10px;
-    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
-    transition: all 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, background 0.3s;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 .input-group:hover {
     transform: scale(1.02);
-    background: rgba(0, 0, 0, 0.3);
-}
-
-/* Подзаголовки */
-h2 {
-    color: #ffcc00;
-    font-size: 1.2rem;
-    margin-bottom: 10px;
+    background: rgba(60, 60, 60, 1); /* Немного светлее при наведении */
 }
 
 /* Метки */
@@ -85,7 +69,7 @@ label {
     text-align: left;
     margin-bottom: 5px;
     font-weight: 600;
-    color: #dcdcdc;
+    color: #cccccc; /* Светло-серый */
 }
 
 /* Поля ввода */
@@ -95,21 +79,22 @@ input {
     margin-bottom: 10px;
     border: none;
     border-radius: 5px;
-    background: #fff;
-    color: #333;
+    background: #222; /* Почти чёрный фон */
+    color: #fff;
     font-size: 1rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: box-shadow 0.3s ease;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+    transition: box-shadow 0.3s ease, transform 0.2s;
 }
 
 input:focus {
-    box-shadow: 0 0 10px rgba(255, 204, 0, 0.8);
+    box-shadow: 0 0 10px #00eaff; /* Подсветка голубым */
     outline: none;
+    transform: scale(1.02);
 }
 
 /* Кнопка */
 button {
-    background: linear-gradient(90deg, #ff7b00, #ff9500); /* Градиентная кнопка */
+    background: linear-gradient(90deg, #4a00e0, #8e2de2); /* Градиент фиолетовый */
     color: #fff;
     padding: 15px;
     border: none;
@@ -120,36 +105,44 @@ button {
     text-transform: uppercase;
     transition: all 0.3s ease-in-out;
     cursor: pointer;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    position: relative;
+    overflow: hidden;
 }
 
 button:hover {
-    background: linear-gradient(90deg, #ff9500, #ff7b00);
-    transform: translateY(-3px) scale(1.05);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(90deg, #8e2de2, #4a00e0); /* Обратный градиент */
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.7);
+}
+
+button:active {
+    transform: translateY(2px);
 }
 
 /* Результаты */
 #results {
     margin-top: 30px;
     padding: 20px;
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(50, 50, 50, 0.9); /* Тёмно-серый фон */
     border-radius: 10px;
-    animation: fadeIn 1s ease-in-out;
+    animation: slideUp 1s ease-in-out;
 }
 
 /* Анимация появления результатов */
-@keyframes fadeIn {
+@keyframes slideUp {
     0% {
         opacity: 0;
+        transform: translateY(20px);
     }
     100% {
         opacity: 1;
+        transform: translateY(0);
     }
 }
 
 #results h2 {
-    color: #ffcc00;
+    color: #ff4081; /* Яркий розовый */
     margin-bottom: 15px;
 }
 
@@ -159,18 +152,7 @@ button:hover {
 }
 
 #results span {
-    color: #ffcc00;
+    color: #00eaff; /* Голубой */
     font-weight: bold;
     font-size: 1.4rem;
-}
-
-/* Дополнительные стили */
-input[type="number"] {
-    -moz-appearance: textfield; /* Убираем стрелки на числовых полях */
-}
-
-input[type="number"]::-webkit-outer-spin-button,
-input[type="number"]::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
 }
