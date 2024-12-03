@@ -1,39 +1,25 @@
-document.addEventListener("input", () => {
-  // Введення даних
-  const seedQty = parseFloat(document.getElementById("seedQty").value) || 0;
-  const seedPrice = parseFloat(document.getElementById("seedPrice").value) || 0;
+document.getElementById("calculate").addEventListener("click", function () {
+    const seeds = Number(document.getElementById("seeds").value) || 0;
+    const seedPrice = Number(document.getElementById("seed-price").value) || 0;
+    const fertilizer = Number(document.getElementById("fertilizer").value) || 0;
+    const fertilizerPrice = Number(document.getElementById("fertilizer-price").value) || 0;
+    const water = Number(document.getElementById("water").value) || 0;
+    const waterPrice = Number(document.getElementById("water-price").value) || 0;
+    const sellPrice = Number(document.getElementById("sell-price").value) || 0;
 
-  const fertilizerQty = parseFloat(document.getElementById("fertilizerQty").value) || 0;
-  const fertilizerPrice = parseFloat(document.getElementById("fertilizerPrice").value) || 0;
+    // Витрати
+    const totalCost = seeds * seedPrice + fertilizer * fertilizerPrice + water * waterPrice;
 
-  const waterQty = parseFloat(document.getElementById("waterQty").value) || 0;
-  const waterPrice = parseFloat(document.getElementById("waterPrice").value) || 0;
+    // Виробництво
+    const berries = seeds * 2.5; // 20 насінин = 50 ягід
 
-  const plantedSeeds = parseFloat(document.getElementById("plantedSeeds").value) || 0;
-  const sellPrice = parseFloat(document.getElementById("sellPrice").value) || 0;
+    // Доходи
+    const grossIncome = berries * sellPrice;
+    const netIncome = grossIncome - totalCost;
 
-  // Розрахунки
-  const seedTotal = seedQty * seedPrice;
-  const fertilizerTotal = fertilizerQty * fertilizerPrice;
-  const waterTotal = waterQty * waterPrice;
-
-  const totalExpenses = seedTotal + fertilizerTotal + waterTotal;
-
-  const berryCount = plantedSeeds * 2.5; // 1 насіння = 2.5 ягод
-  const cleanBerryCount = berryCount * 0.9; // 90% від грязних
-
-  const grossIncome = berryCount * sellPrice;
-  const netIncome = cleanBerryCount * sellPrice - totalExpenses;
-
-  // Виведення результатів
-  document.getElementById("seedTotal").textContent = `${seedTotal.toFixed(2)} грн`;
-  document.getElementById("fertilizerTotal").textContent = `${fertilizerTotal.toFixed(2)} грн`;
-  document.getElementById("waterTotal").textContent = `${waterTotal.toFixed(2)} грн`;
-  document.getElementById("totalExpenses").textContent = `${totalExpenses.toFixed(2)} грн`;
-
-  document.getElementById("berryCount").textContent = `${berryCount.toFixed(2)} ягід (грязними)`;
-  document.getElementById("cleanBerryCount").textContent = `${cleanBerryCount.toFixed(2)}`;
-
-  document.getElementById("grossIncome").textContent = `${grossIncome.toFixed(2)} грн`;
-  document.getElementById("netIncome").textContent = `${netIncome.toFixed(2)} грн`;
+    // Виведення результатів
+    document.getElementById("cost").textContent = `Загальні витрати: ${totalCost.toFixed(2)} грн`;
+    document.getElementById("berries").textContent = `Кількість ягід: ${berries.toFixed(0)} шт`;
+    document.getElementById("gross-income").textContent = `Доходи брутто: ${grossIncome.toFixed(2)} грн`;
+    document.getElementById("net-income").textContent = `Доходи нетто: ${netIncome.toFixed(2)} грн`;
 });
