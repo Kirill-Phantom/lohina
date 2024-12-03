@@ -18,6 +18,12 @@ document.getElementById("calculate").addEventListener("click", () => {
     const grossIncome = berries * sellPrice;
     const netIncome = grossIncome - totalCost;
 
+    // Анимация появления результатов
+    const resultsDiv = document.getElementById("results");
+    resultsDiv.classList.remove("fade-in");
+    void resultsDiv.offsetWidth; // Трюк для перезапуска анимации
+    resultsDiv.classList.add("fade-in");
+
     // Отображение результатов
     document.getElementById("cost").querySelector("span").textContent = totalCost.toFixed(2);
     document.getElementById("berries").querySelector("span").textContent = berries.toFixed(0);
