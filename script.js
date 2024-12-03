@@ -1,4 +1,5 @@
-document.getElementById("calculate").addEventListener("click", function () {
+document.getElementById("calculate").addEventListener("click", () => {
+    // Получение данных из формы
     const seeds = Number(document.getElementById("seeds").value) || 0;
     const seedPrice = Number(document.getElementById("seed-price").value) || 0;
     const fertilizer = Number(document.getElementById("fertilizer").value) || 0;
@@ -7,19 +8,19 @@ document.getElementById("calculate").addEventListener("click", function () {
     const waterPrice = Number(document.getElementById("water-price").value) || 0;
     const sellPrice = Number(document.getElementById("sell-price").value) || 0;
 
-    // Витрати
+    // Расчёт затрат
     const totalCost = seeds * seedPrice + fertilizer * fertilizerPrice + water * waterPrice;
 
-    // Виробництво
-    const berries = seeds * 2.5; // 20 насінин = 50 ягід
+    // Количество ягод
+    const berries = seeds * 2.5; // 20 семян = 50 ягод
 
-    // Доходи
+    // Доходы
     const grossIncome = berries * sellPrice;
     const netIncome = grossIncome - totalCost;
 
-    // Виведення результатів
-    document.getElementById("cost").textContent = `Загальні витрати: ${totalCost.toFixed(2)} грн`;
-    document.getElementById("berries").textContent = `Кількість ягід: ${berries.toFixed(0)} шт`;
-    document.getElementById("gross-income").textContent = `Доходи брутто: ${grossIncome.toFixed(2)} грн`;
-    document.getElementById("net-income").textContent = `Доходи нетто: ${netIncome.toFixed(2)} грн`;
+    // Отображение результатов
+    document.getElementById("cost").querySelector("span").textContent = totalCost.toFixed(2);
+    document.getElementById("berries").querySelector("span").textContent = berries.toFixed(0);
+    document.getElementById("gross-income").querySelector("span").textContent = grossIncome.toFixed(2);
+    document.getElementById("net-income").querySelector("span").textContent = netIncome.toFixed(2);
 });
