@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Калькулятор черники</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Калькулятор черники</h1>
+    <form id="calculator-form">
+      <h2>Затраты</h2>
+      <div class="row">
+        <label>Семена (шт):</label>
+        <input type="number" id="seedQty" placeholder="Количество семян">
+        <input type="number" id="seedPrice" placeholder="Цена за 1 шт">
+        <span id="seedTotal">0</span>
+      </div>
+      <div class="row">
+        <label>Удобрения (шт):</label>
+        <input type="number" id="fertilizerQty" placeholder="Количество удобрений">
+        <input type="number" id="fertilizerPrice" placeholder="Цена за 1 шт">
+        <span id="fertilizerTotal">0</span>
+      </div>
+      <div class="row">
+        <label>Вода (л):</label>
+        <input type="number" id="waterQty" placeholder="Количество воды">
+        <input type="number" id="waterPrice" placeholder="Цена за 1 л">
+        <span id="waterTotal">0</span>
+      </div>
+      <h2>Итог затрат: <span id="totalExpenses">0</span></h2>
+
+      <h2>Черника</h2>
+      <div class="row">
+        <label>Посаженные семена:</label>
+        <input type="number" id="plantedSeeds" placeholder="Количество семян">
+        <span id="berryCount">0 (грязными)</span>
+      </div>
+      <div class="row">
+        <label>Чистая черника (90%):</label>
+        <span id="cleanBerryCount">0</span>
+      </div>
+      <div class="row">
+        <label>Цена продажи (за 1 кг):</label>
+        <input type="number" id="sellPrice" placeholder="Цена за 1 кг">
+      </div>
+      <h2>Доход</h2>
+      <div class="row">
+        <label>Грязный доход:</label>
+        <span id="grossIncome">0</span>
+      </div>
+      <div class="row">
+        <label>Чистый доход:</label>
+        <span id="netIncome">0</span>
+      </div>
+    </form>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
