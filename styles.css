@@ -2,39 +2,42 @@ body {
     font-family: 'Comfortaa', sans-serif;
     margin: 0;
     padding: 0;
-    background: #f0f8ff;
+    background: #f9f9f9;
     color: #333;
 }
 
 .container {
-    max-width: 600px;
-    margin: 20px auto;
+    max-width: 700px;
+    margin: 40px auto;
     padding: 20px;
-    background: #fff;
+    background: #ffffff;
     border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-h1, h2 {
+h1 {
     text-align: center;
     color: #4a90e2;
+    margin-bottom: 20px;
 }
 
 .input-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
     margin-bottom: 15px;
 }
 
 label {
-    display: block;
-    margin-bottom: 5px;
+    flex: 1 1 100%;
     font-weight: bold;
+    margin-bottom: 5px;
 }
 
 input {
-    width: 100%;
+    flex: 1 1 calc(50% - 10px);
     padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #ddd;
     border-radius: 5px;
     font-size: 16px;
 }
@@ -42,7 +45,7 @@ input {
 button {
     display: block;
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     background: #4a90e2;
     color: white;
     border: none;
@@ -50,6 +53,7 @@ button {
     font-size: 18px;
     cursor: pointer;
     transition: background 0.3s;
+    margin-top: 15px;
 }
 
 button:hover {
@@ -60,7 +64,12 @@ button:hover {
     margin-top: 20px;
 }
 
-p {
+#results p {
     font-size: 18px;
-    line-height: 1.5;
+    margin: 10px 0;
+}
+
+#results span {
+    font-weight: bold;
+    color: #4a90e2;
 }
