@@ -2,23 +2,23 @@ body {
     font-family: 'Comfortaa', sans-serif;
     margin: 0;
     padding: 0;
-    background: #000;
-    color: #fff;
+    background: #000; /* Чёрный фон */
+    color: #fff; /* Белый текст */
 }
 
 .container {
     max-width: 700px;
     margin: 40px auto;
     padding: 20px;
-    background: #1a1a1a;
+    background: #1a1a1a; /* Тёмно-серый для контейнера */
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
-    color: #eaeaea;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1); /* Белёсый оттенок */
+    color: #fff;
 }
 
 h1 {
     text-align: center;
-    color: #ffffff;
+    color: #ffffff; /* Белый цвет для заголовка */
     margin-bottom: 20px;
 }
 
@@ -33,29 +33,29 @@ label {
     flex: 1 1 100%;
     font-weight: bold;
     margin-bottom: 5px;
-    color: #eaeaea;
+    color: #eaeaea; /* Светло-серый цвет для текста */
 }
 
 input {
     flex: 1 1 calc(50% - 10px);
     padding: 10px;
-    border: 1px solid #444;
-    background: #000;
-    color: #fff;
+    border: 1px solid #444; /* Серый для рамки */
+    background: #000; /* Чёрный фон полей ввода */
+    color: #fff; /* Белый текст */
     border-radius: 5px;
     font-size: 16px;
 }
 
 input::placeholder {
-    color: #888;
+    color: #888; /* Светло-серый для плейсхолдера */
 }
 
 button {
     display: block;
     width: 100%;
     padding: 12px;
-    background: #333;
-    color: #fff;
+    background: #333; /* Тёмно-серый фон кнопки */
+    color: #fff; /* Белый текст */
     border: none;
     border-radius: 5px;
     font-size: 18px;
@@ -65,11 +65,13 @@ button {
 }
 
 button:hover {
-    background: #555;
+    background: #555; /* Светлее при наведении */
 }
 
 #results {
     margin-top: 20px;
+    border-top: 1px solid #444; /* Отделение результатов */
+    padding-top: 20px;
 }
 
 #results p {
@@ -79,5 +81,5 @@ button:hover {
 
 #results span {
     font-weight: bold;
-    color: #fff;
+    color: #fff; /* Белый цвет выделенных значений */
 }
