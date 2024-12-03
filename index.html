@@ -1,58 +1,59 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Калькулятор черники</title>
+  <title>Калькулятор витрат і доходу</title>
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <div class="container">
-    <h1>Калькулятор черники</h1>
+    <h1>Калькулятор витрат і доходу</h1>
     <form id="calculator-form">
-      <h2>Затраты</h2>
+      <h2>Витрати</h2>
       <div class="row">
-        <label>Семена (шт):</label>
-        <input type="number" id="seedQty" placeholder="Количество семян">
-        <input type="number" id="seedPrice" placeholder="Цена за 1 шт">
-        <span id="seedTotal">0</span>
+        <label>Насіння (шт):</label>
+        <input type="number" id="seedQty" placeholder="Кількість насіння">
+        <input type="number" id="seedPrice" placeholder="Ціна за 1 шт">
+        <span id="seedTotal">0 грн</span>
       </div>
       <div class="row">
-        <label>Удобрения (шт):</label>
-        <input type="number" id="fertilizerQty" placeholder="Количество удобрений">
-        <input type="number" id="fertilizerPrice" placeholder="Цена за 1 шт">
-        <span id="fertilizerTotal">0</span>
+        <label>Добрива (шт):</label>
+        <input type="number" id="fertilizerQty" placeholder="Кількість добрив">
+        <input type="number" id="fertilizerPrice" placeholder="Ціна за 1 шт">
+        <span id="fertilizerTotal">0 грн</span>
       </div>
       <div class="row">
-        <label>Вода (л):</label>
-        <input type="number" id="waterQty" placeholder="Количество воды">
-        <input type="number" id="waterPrice" placeholder="Цена за 1 л">
-        <span id="waterTotal">0</span>
+        <label>Вода (шт):</label>
+        <input type="number" id="waterQty" placeholder="Кількість води">
+        <input type="number" id="waterPrice" placeholder="Ціна за 1 шт">
+        <span id="waterTotal">0 грн</span>
       </div>
-      <h2>Итог затрат: <span id="totalExpenses">0</span></h2>
+      <h2>Загальні витрати: <span id="totalExpenses">0 грн</span></h2>
 
-      <h2>Черника</h2>
+      <h2>Ягоди</h2>
       <div class="row">
-        <label>Посаженные семена:</label>
-        <input type="number" id="plantedSeeds" placeholder="Количество семян">
-        <span id="berryCount">0 (грязными)</span>
+        <label>Посаджене насіння:</label>
+        <input type="number" id="plantedSeeds" placeholder="Кількість насіння">
+        <span id="berryCount">0 ягід (грязними)</span>
       </div>
       <div class="row">
-        <label>Чистая черника (90%):</label>
+        <label>Чиста кількість ягід (90%):</label>
         <span id="cleanBerryCount">0</span>
       </div>
       <div class="row">
-        <label>Цена продажи (за 1 кг):</label>
-        <input type="number" id="sellPrice" placeholder="Цена за 1 кг">
+        <label>Ціна продажу (за 1 шт):</label>
+        <input type="number" id="sellPrice" placeholder="Ціна за 1 ягоду">
       </div>
-      <h2>Доход</h2>
+      <h2>Доходи</h2>
       <div class="row">
-        <label>Грязный доход:</label>
-        <span id="grossIncome">0</span>
+        <label>Брутто:</label>
+        <span id="grossIncome">0 грн</span>
       </div>
       <div class="row">
-        <label>Чистый доход:</label>
-        <span id="netIncome">0</span>
+        <label>Нетто:</label>
+        <span id="netIncome">0 грн</span>
       </div>
     </form>
   </div>
