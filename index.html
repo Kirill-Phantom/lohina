@@ -4,32 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Калькулятор лохини</title>
-    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
         <h1>Калькулятор лохини</h1>
         <form id="calc-form">
-            <div class="input-group">
+            <div class="input-group" data-tooltip="Введіть кількість та ціну насіння">
                 <label>Кількість насіння (шт):</label>
                 <input type="number" id="seeds" min="0" placeholder="Введіть кількість">
                 <label>Ціна за 1 шт насіння (₴):</label>
                 <input type="number" id="seed-price" min="0" placeholder="Введіть ціну">
             </div>
-            <div class="input-group">
+            <div class="input-group" data-tooltip="Введіть кількість та ціну добрива">
                 <label>Кількість добрива (шт):</label>
                 <input type="number" id="fertilizer" min="0" placeholder="Введіть кількість">
                 <label>Ціна за 1 шт добрива (₴):</label>
                 <input type="number" id="fertilizer-price" min="0" placeholder="Введіть ціну">
             </div>
-            <div class="input-group">
+            <div class="input-group" data-tooltip="Введіть кількість та ціну води">
                 <label>Кількість води (шт):</label>
                 <input type="number" id="water" min="0" placeholder="Введіть кількість">
                 <label>Ціна за 1 шт води (₴):</label>
                 <input type="number" id="water-price" min="0" placeholder="Введіть ціну">
             </div>
-            <div class="input-group">
+            <div class="input-group" data-tooltip="Введіть очікувану ціну продажу ягоди">
                 <label>Ціна продажу 1 ягоди на біржі (₴):</label>
                 <input type="number" id="sell-price" min="0" placeholder="Введіть ціну">
             </div>
@@ -37,10 +37,10 @@
         </form>
         <div id="results">
             <h2>Результати</h2>
-            <p id="cost">Загальні витрати : <span>0</span> грн</p>
-            <p id="berries">Кількість ягід : <span>0</span> шт</p>
-            <p id="gross-income">Дохід брутто : <span>0</span> грн</p>
-            <p id="net-income">Дохід нетто : <span>0</span> грн</p>
+            <p id="cost">Загальні витрати: <span>0</span> грн</p>
+            <p id="berries">Кількість ягід: <span>0</span> шт</p>
+            <p id="gross-income">Дохід брутто: <span>0</span> грн</p>
+            <p id="net-income">Дохід нетто: <span>0</span> грн</p>
         </div>
     </div>
     <script src="script.js"></script>
