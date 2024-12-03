@@ -11,18 +11,12 @@ document.getElementById("calculate").addEventListener("click", () => {
     // Расчёт затрат
     const totalCost = seeds * seedPrice + fertilizer * fertilizerPrice + water * waterPrice;
 
-    // Количество ягод
-    const berries = seeds * 2.5; // 20 семян = 50 ягод
+    // Количество ягод (условно 2.5 ягоды на 1 семя)
+    const berries = seeds * 2.5;
 
     // Доходы
     const grossIncome = berries * sellPrice;
     const netIncome = grossIncome - totalCost;
-
-    // Анимация появления результатов
-    const resultsDiv = document.getElementById("results");
-    resultsDiv.classList.remove("fade-in");
-    void resultsDiv.offsetWidth; // Трюк для перезапуска анимации
-    resultsDiv.classList.add("fade-in");
 
     // Отображение результатов
     document.getElementById("cost").querySelector("span").textContent = totalCost.toFixed(2);
