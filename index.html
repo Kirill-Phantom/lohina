@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Розрахунок витрат та доходів</title>
-    <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -12,35 +12,35 @@
         <h1>Розрахунок витрат та доходів</h1>
         <form id="calc-form">
             <div class="input-group">
-                <label for="seeds">Кількість насіння (шт):</label>
-                <input type="number" id="seeds" placeholder="0">
-                <label for="seed-price">Ціна за 1 насінину (грн):</label>
-                <input type="number" id="seed-price" placeholder="0">
+                <label>Кількість насіння (шт):</label>
+                <input type="number" id="seeds" min="0" placeholder="Введіть кількість">
+                <label>Ціна за 1 насінину (грн):</label>
+                <input type="number" id="seed-price" min="0" placeholder="Введіть ціну">
             </div>
             <div class="input-group">
-                <label for="fertilizer">Кількість добрива (шт):</label>
-                <input type="number" id="fertilizer" placeholder="0">
-                <label for="fertilizer-price">Ціна за 1 упаковку добрива (грн):</label>
-                <input type="number" id="fertilizer-price" placeholder="0">
+                <label>Кількість добрива (шт):</label>
+                <input type="number" id="fertilizer" min="0" placeholder="Введіть кількість">
+                <label>Ціна за 1 упаковку (грн):</label>
+                <input type="number" id="fertilizer-price" min="0" placeholder="Введіть ціну">
             </div>
             <div class="input-group">
-                <label for="water">Кількість води (шт):</label>
-                <input type="number" id="water" placeholder="0">
-                <label for="water-price">Ціна за 1 шт води (грн):</label>
-                <input type="number" id="water-price" placeholder="0">
+                <label>Кількість води (шт):</label>
+                <input type="number" id="water" min="0" placeholder="Введіть кількість">
+                <label>Ціна за 1 шт води (грн):</label>
+                <input type="number" id="water-price" min="0" placeholder="Введіть ціну">
             </div>
             <div class="input-group">
-                <label for="sell-price">Ціна продажу 1 ягоди (грн):</label>
-                <input type="number" id="sell-price" placeholder="0">
+                <label>Ціна продажу 1 ягоди (грн):</label>
+                <input type="number" id="sell-price" min="0" placeholder="Введіть ціну">
             </div>
             <button type="button" id="calculate">Розрахувати</button>
         </form>
         <div id="results">
             <h2>Результати</h2>
-            <p id="cost">Загальні витрати: 0 грн</p>
-            <p id="berries">Кількість ягід: 0 шт</p>
-            <p id="gross-income">Доходи брутто: 0 грн</p>
-            <p id="net-income">Доходи нетто: 0 грн</p>
+            <p id="cost">Загальні витрати: <span>0</span> грн</p>
+            <p id="berries">Кількість ягід: <span>0</span> шт</p>
+            <p id="gross-income">Доходи брутто: <span>0</span> грн</p>
+            <p id="net-income">Доходи нетто: <span>0</span> грн</p>
         </div>
     </div>
     <script src="script.js"></script>
