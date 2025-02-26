@@ -1,15 +1,15 @@
 /* Общие стили */
 body {
     font-family: 'Poppins', sans-serif;
-    margin: 0;
+    margin: 15px;
     padding: 0;
     background: linear-gradient(135deg, #1c1c1c, #2a2a2a); /* Тёмный градиент */
     color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    overflow: hidden;
+    min-height: 900px;
+
 }
 
 /* Контейнер */
@@ -42,6 +42,7 @@ body {
 /* Заголовок */
 h1 {
     font-size: 2.5rem;
+    margin-top: 0;
     margin-bottom: 20px;
     color: #00eaff; /* Неоновый голубой */
     text-shadow: 0 0 10px #00eaff, 0 0 20px #00eaff;
@@ -98,7 +99,7 @@ button {
     color: #fff;
     padding: 15px;
     border: none;
-    border-radius: 50px;
+    border-radius: 15px;
     width: 100%;
     font-size: 1.2rem;
     font-weight: 600;
@@ -122,8 +123,8 @@ button:active {
 
 /* Результаты */
 #results {
-    margin-top: 30px;
-    padding: 20px;
+    margin-top: 10px;
+    padding: 5px;
     background: rgba(50, 50, 50, 0.9); /* Тёмно-серый фон */
     border-radius: 10px;
     animation: slideUp 1s ease-in-out;
@@ -144,6 +145,7 @@ button:active {
 #results h2 {
     color: #ff4081; /* Яркий розовый */
     margin-bottom: 15px;
+    margin-top: 5px;
 }
 
 #results p {
@@ -155,4 +157,17 @@ button:active {
     color: #00eaff; /* Голубой */
     font-weight: bold;
     font-size: 1.4rem;
+}
+
+.res{
+    display: flex;
+    justify-content: space-between;
+}
+.cost{
+    text-align: left;
+    margin-left: 10px;
+}
+.income{
+    text-align: left;
+    margin-right: 10px;
 }
